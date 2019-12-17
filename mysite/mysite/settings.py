@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls.apps.PollsConfig',
 ]
 
 MIDDLEWARE = [
@@ -81,12 +82,21 @@ DATABASES = {
 }
 
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'djongo',
-#         'NAME': 'myapp-djongo-db',
-#     }
+#        'default': {
+#            'ENGINE': 'djongo',
+#            'NAME': 'django',
+#        }
+#    }
+
+# MONGODB_DATABASES = {
+#     "default": {
+#         "name": "django",
+#         "host": "localhost:27017",
+#         "tz_aware": True, # if you using timezones in django (USE_TZ = True)
+#     },
 # }
 
+# INSTALLED_APPS += ["django_mongoengine"]
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -110,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Australia/Melbourne'
 
 USE_I18N = True
 
